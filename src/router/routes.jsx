@@ -3,8 +3,9 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import HomePage from '../views/HomePage';
 import AboutPage from '../views/AboutPage';
 import ContactPage from '../views/ContactPage';
-import TabLayout from '../layouts/TabLayout';
+import TabLayout from '../layout/TabLayout';
 import OnboardPage from '../views/OnboardPage';
+import NotFound from '../views/NotFound';
 
 
 
@@ -33,6 +34,8 @@ const Routes = () => {
         <Route path="/contact" component={ContactPage} />
         <Route path="/home" component={HomePage} /> */}
         <Route exact path="/" component={OnboardPage} />
+          {/* Catch-all route for Not Found */}
+        <Route path="*" component={NotFound} />
       </Switch>
     </Router>
   );
