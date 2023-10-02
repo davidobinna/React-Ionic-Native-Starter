@@ -1,0 +1,1111 @@
+@import "@ionic/react/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/react/css/normalize.css";
+@import "@ionic/react/css/structure.css";
+@import "@ionic/react/css/typography.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/react/css/padding.css";
+@import "@ionic/react/css/float-elements.css";
+@import "@ionic/react/css/text-alignment.css";
+@import "@ionic/react/css/text-transformation.css";
+@import "@ionic/react/css/flex-utils.css";
+@import "@ionic/react/css/display.css";
+
+
+:root {
+    --primary: #009d06;
+    // --primary: #32b141;
+    --secondary: #7ac81e;
+    --bg-color: #f5f7f9;
+    --bg-white: #fff;
+    --transparent: rgba(0, 0, 0, 0);
+    --text-light: #979ca7;
+    --text-light2: #c1c1c1;
+    --text-dark: #2b2c30;
+    --text-dark2: #5d5d5d;
+    --text-white: #fff;
+    --text-black: #000;
+    --item-bg: #f5f7f9;
+    --border-line-color: #d7d7d7;
+    --yelow-color: #ffba34;
+}
+
+.bg_color {
+    --background: var(--bg-color);
+}
+
+.bg_white {
+    --background: var(--bg-white);
+}
+
+ion-page {
+    background: var(--bg-white);
+}  
+
+.d-flex {
+    display: flex !important;
+    align-items: center;
+    width: 100%;
+    .end {
+        margin-left: auto !important;
+        margin-right: 0 !important;
+        display: block;
+    }
+}
+
+.center_img {
+    position: relative;
+    overflow: hidden;
+    img {
+        &.crop_img {
+            position: absolute;
+            min-width: 100%;
+            min-height: 100%;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+}
+
+.button {
+    &.btn {
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 500;
+        height: 55px;
+        --background: var(--primary);
+        text-transform: none;
+        color: var(--text-white);
+        margin: 0;
+        letter-spacing: 0;
+        ion-icon {
+            font-size: 1.4rem;
+        }
+        &:hover:not(.disable-hover) {
+            --background: var(--primary);
+        }
+        &.button-outline {
+            --background: var(--transparent);
+            --border-color: var(--primary);
+            --border-width: 1.5px;
+            height: calc(55px - 3px);
+            &:hover:not(.disable-hover) {
+                --background: var(--transparent);
+            }
+        }
+        &.button-round {
+            --border-radius: 50px !important;
+        }
+        &.button-block {
+            --border-radius: 18px !important;
+        }
+        &.button-clear {
+            --background: var(--transparent);
+            &:hover:not(.disable-hover) {
+                --background: var(--transparent);
+            }
+        }
+    }
+}
+
+.button {
+    &.btn {
+        width: 100%;
+        font-size: 1.0rem;
+        font-weight: 500;
+        height: 55px;
+        --background: var(--primary);
+        text-transform: none;
+        color: var(--text-white);
+        margin: 0;
+        --box-shadow: none;
+        letter-spacing: 0;
+        ion-icon {
+            font-size: 1.4rem;
+        }
+        &:hover:not(.disable-hover) {
+            --background: var(--primary);
+        }
+        &.button-outline {
+            --background: var(--transparent);
+            color: var(--text-dark);
+            --border-color: var(--border-line-color);
+            --border-width: 1.5px;
+            height: 55px;
+            font-weight: 500;
+            font-size: 0.9rem;
+            &:hover:not(.disable-hover) {
+                --background: var(--transparent);
+            }
+        }
+        &.button-round {
+            --border-radius: 50px !important;
+        }
+        &.button-block {
+            --border-radius: 12px !important;
+        }
+    }
+}
+
+ion-header {
+    z-index: 999;
+    background: var(--bg-white);
+    &::after {
+        display: none !important;
+    }
+    ion-toolbar {
+        --background: var(--bg-white);
+        display: flex;
+        align-items: center;
+        min-height: 70px !important;
+        height: auto;
+        overflow: visible !important;
+        --border-width: 0 !important;
+        padding: 0 15px;
+        ion-buttons {
+            position: relative !important;
+            margin: 0;
+            --padding-end: 0 !important;
+            --padding-start: 0 !important;
+            --color: var(--text-white) !important;
+            .button-inner {
+                ion-icon {
+                    font-size: 1.8rem;
+                    padding-left: 00px;
+                    color: var(--text-white);
+                }
+            }
+            ion-back-button {
+                --padding-start: 0;
+                --padding-end: 0;
+                --padding-top: 0;
+                --padding-bottom: 0;
+                --border-radius: 0;
+                --color: var(--text-dark);
+                --icon-font-size: 1.6rem;
+                width: 45px;
+                min-width: 45px;
+            }
+            ion-menu-button {
+                --color: var(--text-white) !important;
+                --padding-end: 0 !important;
+                font-size: 1.85rem !important;
+                &.ios {
+                    font-size: 1.85rem !important;
+                }
+            }
+            ion-back-button {
+                .button-native {
+                    padding: 0 !important;
+                }
+            }
+            &.ios {
+                padding: 0 10px !important;
+            }
+        }
+        ion-title {
+            color: var(--text-black);
+            font-size: 1.2rem;
+            font-weight: 600;
+            overflow: visible !important;
+            line-height: 70px;
+            position: relative !important;
+            left: 0;
+            width: 100%;
+            text-align: justify;
+            padding: 0 0px !important;
+            top: 0;
+            letter-spacing: 0;
+        }
+    }
+    &.bg_transparent {
+        z-index: 999;
+        width: 100%;
+        height: auto;
+        background: var(--transparent);
+        ion-toolbar {
+            --background: var(--transparent);
+            --ion-color-base: var(--transparent) !important;
+        }
+    }
+    .header_text {
+        width: 100%;
+        padding: 0 25px;
+        min-height: 100px;
+        h1 {
+            margin: 0;
+            color: var(--text-dark);
+            font-weight: 600;
+            font-size: 1.45rem;
+            padding-bottom: 10px;
+        }
+        h2 {
+            margin: 0;
+            color: var(--text-light2);
+            font-size: 0.85rem;
+            font-weight: 500;
+            line-height: 22px;
+        }
+    }
+}
+
+.form {
+    display: block;
+    overflow: visible;
+    position: relative;
+    margin: 0 auto;
+    width: calc(100% - 50px);
+    ion-list {
+        margin: 0;
+        overflow: visible;
+        width: 100%;
+        padding: 0;
+        position: relative;
+        background: none;
+        contain: none;
+    }
+    ion-item {
+        padding: 0;
+        min-height: unset !important;
+        margin: 0;
+        --background: var(--transparent);
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --padding-start: 0;
+        --highligh-color-focused: var(--transparent) !important;
+        --background-hover: var(--transparent) !important;
+        --background-focused: var(--transparent) !important;
+        --ripple-color: var(--transparent) !important;
+        box-shadow: none !important;
+        overflow: visible !important;
+        margin-bottom: 25px;
+        ion-label {
+            color: var(--text-light) !important;
+            margin: 0;
+            font-size: 1rem !important;
+            letter-spacing: 0;
+            font-weight: 500;
+            max-width: 100% !important;
+            width: 100% !important;
+            flex: unset !important;
+            padding-bottom: 8px;
+        }
+        .item_inner {
+            width: 100%;
+            .input_box {
+                width: 100%;
+                padding: 13px 20px;
+                border-radius: 12px;
+                min-height: 50px;
+                display: flex !important;
+                align-items: center;
+                border: 1.5px solid var(--border-line-color);
+                background: var(--item-bg);
+            }
+        }
+        ion-icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+            min-width: 25px;
+            padding: 0 3px;
+            margin-top: 0;
+            margin-bottom: 0;
+            &.ion-accordion-toggle-icon {
+                color: var(--text-dark);
+            }
+        }
+        ion-textarea,
+        ion-input {
+            --padding: 0 !important;
+            font-size: 0.98rem !important;
+            font-weight: 600 !important;
+            --padding-start: 0 !important;
+            --padding-end: 0px !important;
+            --padding-top: 0px !important;
+            --padding-bottom: 0px !important;
+            color: var(--text-dark);
+            --placeholder-color: var(--text-light2) !important;
+            --placeholder-opacity: 1;
+            --placeholder-font-weight: 500 !important;
+            margin: 0;
+            flex: unset !important;
+            width: 100%;
+            letter-spacing: 0 !important;
+            input {
+                --padding: var(--no-padding);
+                &.native-input {
+                    --padding: var(--no-padding);
+                }
+            }
+        }
+        &.item-select {
+            ion-select {
+                padding: 0 0;
+                font-size: 0.98rem !important;
+                font-weight: 500 !important;
+                display: flex;
+                letter-spacing: 0;
+                align-items: center;
+                width: 100%;
+                max-width: 100%;
+                color: var(--text-dark);
+                --placeholder-color: var(--text-light2) !important;
+                --placeholder-opacity: 1;
+                &::part(icon) {
+                    display: none !important;
+                }
+            }
+            &.item-has-value {
+                ion-select {
+                    font-weight: 600 !important;
+                }
+            }
+            ion-icon {
+                &.zmdi-chevron-down {
+                    font-size: 1.5rem;
+                    color: var(--text-dark);
+                    line-height: normal;
+                    height: 23px;
+                    min-width: fit-content;
+                }
+            }
+        }
+        &.item-datetime {
+            ion-datetime {
+                padding: 15px 0;
+                font-size: 1.1rem !important;
+                font-weight: 500 !important;
+                //color: var(--text-black);
+                --placeholder-color: var(--text-light) !important;
+            }
+        }
+    }
+    ion-row {
+        margin: 0 -5px;
+    }
+}
+
+ion-spinner {
+    --spinner-color: var(--primary);
+}
+
+ion-loading {
+    --spinner-color: var(--primary);
+}
+
+ion-select-popover {
+    ion-radio {
+        --color-checked: var(--primary);
+    }
+}
+
+ion-header .header_bg img {
+    height: unset !important;
+    max-height: 260px;
+}
+
+ion-bottom-drawer {
+    ion-content {
+        --background: var(--bg-color) !important;
+    }
+}
+
+ion-item {
+    --ripple-color: var(--transparent) !important;
+}
+
+ion-searchbar {
+    .searchbar-input-container {
+        input {
+            box-shadow: none !important;
+            padding: 0 !important;
+            font-weight: 500 !important;
+            font-size: 1.00rem !important;
+        }
+    }
+}
+
+app-shopping-category,
+app-start-shopping,
+app-medicine-subcategories,
+app-medicine-shopping,
+app-parcel-track,
+app-parcel-delivery-type,
+app-select-bike-location,
+app-parcel-delivery-location,
+app-bike-ride-info,
+app-bike-available,
+app-cab-ride-info,
+app-select-cab-location,
+app-available-cabs {
+    ion-searchbar {
+        .searchbar-input-container {
+            input {
+                font-size: .85rem !important;
+                font-weight: 600 !important;
+                letter-spacing: 0 !important;
+            }
+        }
+    }
+}
+
+app-add-new-address {
+    ion-searchbar {
+        .searchbar-input-container {
+            input {
+                font-size: .9rem !important;
+                font-weight: 600 !important;
+                letter-spacing: 0 !important;
+            }
+        }
+    }
+}
+
+ion-accordion.accordion-animated>[slot=header] .ion-accordion-toggle-icon {
+    color: var(--text-black) !important;
+    font-size: 1.1rem !important;
+    min-width: fit-content !important;
+    margin: 0;
+    font-weight: 600;
+}
+
+app-medicine-seller-info,
+app-restaurant-profile {
+    ion-accordion.accordion-animated>[slot=header] .ion-accordion-toggle-icon {
+        font-size: 1.5rem !important;
+    }
+}
+
+ion-backdrop {
+    --ion-background-color: var(--transparent) !important;
+    background: rgb(0 0 0 / 43%);
+    backdrop-filter: blur(5px);
+    opacity: 1 !important;
+}
+
+app-wallet {
+    ion-segment-button::part(indicator) {
+        width: 70px;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+}
+
+ion-modal {
+    --background: rgb(0 0 0 / 16%) !important;
+    backdrop-filter: blur(6px);
+    --width: 100%;
+    --height: 100%;
+    --backdrop-opacity: 0;
+    .ion-page {
+        background: #00000000;
+    }
+    app-readout {
+        &.ion-page {
+            background: #00000000;
+        }
+    }
+}
+
+.swiper-slide img {
+    max-height: unset;
+}
+
+.swiper-pagination-bullet {
+    opacity: 1 !important;
+}
+
+ion-modal {
+    ion-content {
+        --background: var(--transparent);
+        ion-datetime {
+            max-width: 280px;
+            margin: auto;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            position: absolute;
+            border-radius: 13px !important;
+            min-width: calc(100% - 58px) !important;
+            padding-bottom: 40px;
+            height: fit-content;
+            overflow: hidden;
+            --background: var(--bg-white);
+            color: var(--text-white);
+            &::part(time-body) {
+                min-width: 50% !important;
+                text-align: center !important;
+                display: block !important;
+                min-height: 45px !important;
+                font-size: 1.2rem !important;
+            }
+            ion-buttons {
+                padding: 0;
+                display: flex !important;
+                align-items: center !important;
+                position: relative;
+                flex-wrap: nowrap;
+                transform: unset !important;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                ion-button {
+                    color: var(--text-white);
+                    background: var(--primary);
+                    height: 50px !important;
+                    text-align: center;
+                    margin: 0 !important;
+                    width: 100%;
+                    min-width: 50%;
+                    position: relative;
+                    font-size: 0.9rem !important;
+                    text-transform: none;
+                    letter-spacing: 0.5px;
+                    --border-radius: 0px !important;
+                    &:nth-child(2) {
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            width: 1.5px;
+                            height: 100%;
+                            background-color: var(--text-white);
+                            z-index: 9999;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.alert-wrapper {
+    border-radius: 13px !important;
+    min-width: calc(100% - 58px) !important;
+    max-height: 484px !important;
+    height: auto;
+    .alert-head {
+        background: var(--bg-white);
+        padding: 20px 23px 16px 23px;
+        h2 {
+            text-transform: unset;
+            letter-spacing: 0;
+            font-size: 1.3rem;
+            color: var(--text-black);
+        }
+    }
+    .alert-radio-group {
+        max-height: 290px !important;
+        border-top: none !important;
+        .alert-radio-button {
+            .alert-button-inner {
+                .alert-radio-label {
+                    font-size: 1.15rem;
+                    color: var(--text-black);
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+    .alert-button-group {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 1.5px;
+            height: 100%;
+            background-color: var(--text-white);
+            z-index: 9999;
+            margin: 0 auto;
+        }
+        .alert-button {
+            color: var(--text-white);
+            background: var(--primary);
+            height: 50px;
+            text-align: center;
+            margin: 0;
+            width: 50%;
+            .alert-button-inner {
+                width: 100%;
+                display: block;
+                height: fit-content;
+                font-size: 0.9rem;
+                text-transform: none;
+                letter-spacing: 0.5px;
+            }
+        }
+    }
+}
+
+.animate__animated {
+    --animate-duration: 0s;
+    &:nth-child(1) {
+        --animate-duration: 0.15s;
+    }
+    &:nth-child(2) {
+        --animate-duration: 0.2s;
+    }
+    &:nth-child(3) {
+        --animate-duration: 0.25s;
+    }
+    &:nth-child(4) {
+        --animate-duration: 0.3s;
+    }
+    &:nth-child(5) {
+        --animate-duration: 0.35s;
+    }
+    &:nth-child(6) {
+        --animate-duration: 0.4s;
+    }
+    &:nth-child(7) {
+        --animate-duration: 0.45s;
+    }
+    &:nth-child(8) {
+        --animate-duration: 0.5s;
+    }
+    &:nth-child(9) {
+        --animate-duration: 0.55s;
+    }
+    &:nth-child(10) {
+        --animate-duration: 0.6s;
+    }
+    &:nth-child(11) {
+        --animate-duration: 0.65s;
+    }
+    &:nth-child(12) {
+        --animate-duration: 0.7s;
+    }
+    &:nth-child(13) {
+        --animate-duration: 0.5s;
+    }
+    &:nth-child(14) {
+        --animate-duration: 0.5s;
+    }
+    &:nth-child(15) {
+        --animate-duration: 0.5s;
+    }
+}
+
+app-shopping-product-info {
+    .swiper-pagination {
+        bottom: 52px !important;
+    }
+}
+
+ion-segment ion-segment-button {
+    --border-width: 0 !important;
+}
+
+ion-modal {
+    app-cab-trip-completed,
+    app-shopping-order-delivered,
+    app-home-service-completed,
+    app-bike-ride-completed,
+    app-grocery-delivered,
+    app-food-delivered {
+        border-radius: 30px 30px 0 0 !important;
+        overflow: hidden !important;
+        top: 40px !important;
+    }
+}
+
+ion-app[dir="rtl"] {
+    ion-header ion-toolbar {
+        ion-back-button {
+            transform: rotate(180deg) !important;
+        }
+        // ion-title {
+        //     padding-right: 0 !important;
+        //     padding-left: 15px !important;
+        // }
+    }
+    .d-flex .end {
+        margin-left: 0 !important;
+        margin-right: auto !important;
+    }
+    .material-symbols-outlined {
+        direction: rtl !important;
+    }
+    app-my-profile,
+    app-sign-up {
+        .form .image_container ion-icon {
+            right: unset !important;
+            left: -10px !important;
+        }
+    }
+    app-home {
+        .category .category-row ion-row ion-col .item .img_box {
+            left: unset !important;
+            right: 0 !important;
+            img {
+                transform: scaleX(-1);
+            }
+        }
+        .offers .scroll-x .scroll-item {
+            &:first-child {
+                margin-right: 20px !important;
+                margin-left: 6px !important;
+            }
+            &:last-child {
+                margin-right: 6px !important;
+                margin-left: 20px !important;
+            }
+        }
+    }
+    app-account {
+        .form ion-list .profileInfo .image_container ion-icon {
+            left: -unset !important;
+            right: -20px !important;
+        }
+    }
+    app-parcel-delivery-location,
+    app-select-bike-location,
+    app-select-cab-location,
+    app-order-grocery,
+    app-order-food {
+        ion-header .header_bg img {
+            transform: scaleX(-1);
+        }
+        .sub_category .scroll-x .item {
+            img {
+                transform: scaleX(-1);
+            }
+            &:first-child {
+                margin-right: 20px !important;
+                margin-left: 5px !important;
+            }
+            &:last-child {
+                margin-right: 5px !important;
+                margin-left: 20px !important;
+            }
+        }
+        ion-list ion-item .item-inner {
+            .img_box {
+                margin-right: 0 !important;
+                margin-left: 18px !important;
+            }
+            .text_box h5 ion-badge {
+                margin-right: 0 !important;
+                margin-left: 10px !important;
+            }
+        }
+    }
+    app-payment {
+        .form ion-list ion-item .item_inner .img_box img {
+            transform: scaleX(-1);
+        }
+    }
+    app-shopping-order-delivered,
+    app-shopping-order-track,
+    app-medicine-order-info,
+    app-parcel-delivered,
+    app-parcel-track,
+    app-bike-ride-completed,
+    app-bike-ride-info,
+    app-cab-trip-completed,
+    app-cab-ride-info,
+    app-grocery-delivered,
+    app-grocery-order-info,
+    app-food-delivered,
+    app-food-order-info {
+        .form ion-list {
+            .listHeader {
+                padding-left: 20px !important;
+                padding-right: 70px !important;
+                .delivery_icon {
+                    right: -12px !important;
+                    left: unset !important;
+                    img {
+                        transform: scaleX(-1);
+                    }
+                }
+            }
+            ion-card {
+                &.deliverymanInfo ion-item .image_container ion-icon {
+                    right: -24px !important;
+                    left: unset !important;
+                }
+                &.locationInfo .dots {
+                    right: 28px !important;
+                    left: unset !important;
+                }
+            }
+        }
+    }
+    app-shopping-order-delivered,
+    app-shopping-category,
+    app-start-shopping,
+    app-medicine-delivered,
+    app-medicine-shopping,
+    app-parcel-delivered,
+    app-parcel-track,
+    app-parcel-track,
+    app-home-service-completed,
+    app-home-service-subcategories,
+    app-home-services,
+    app-bike-ride-completed,
+    app-bike-ride-info,
+    app-cab-trip-completed,
+    app-cab-ride-info,
+    app-grocery-delivered,
+    app-food-delivered {
+        ion-header .header_bg img {
+            transform: scaleX(-1);
+        }
+    }
+    app-bike-ride-info,
+    app-cab-ride-info {
+        .form ion-list {
+            ion-card {
+                &.deliverymanInfo ion-item .image_container ion-icon {
+                    right: 0 !important;
+                    left: 0 !important;
+                }
+            }
+        }
+    }
+    app-order-grocery {
+        .sort .sort_item {
+            &:first-child {
+                margin-right: 20px !important;
+                margin-left: 6px !important;
+            }
+            &:last-child {
+                margin-right: 6px !important;
+                margin-left: 20px !important;
+            }
+        }
+    }
+    app-grocery-store {
+        ion-list .scroll-x .item {
+            &:first-child {
+                margin-right: 20px !important;
+                margin-left: 6px !important;
+            }
+            &:last-child {
+                margin-right: 6px !important;
+                margin-left: 20px !important;
+            }
+        }
+    }
+    app-shopping-products,
+    app-grocery-category {
+        ion-header .header_text ion-segment ion-segment-button {
+            &:first-child {
+                margin-right: 0 !important;
+                margin-left: 10px !important;
+            }
+            &:last-child {
+                margin-right: 10px !important;
+                margin-left: 20px !important;
+            }
+        }
+    }
+    app-send-parcel,
+    app-book-bike,
+    app-book-cab {
+        ion-footer .footer_bg img {
+            transform: scaleX(-1);
+        }
+    }
+    app-offers {
+        .sort .sort_item {
+            &:first-child {
+                margin-right: 20px !important;
+                margin-left: 6px !important;
+            }
+            &:last-child {
+                margin-right: 6px !important;
+                margin-left: 20px !important;
+            }
+        }
+        .form ion-card .scroll-x .offer {
+            &:first-child {
+                margin-right: 20px !important;
+                margin-left: 6px !important;
+            }
+            &:last-child {
+                margin-right: 6px !important;
+                margin-left: 20px !important;
+            }
+        }
+    }
+    app-wallet {
+        ion-header h3 ion-fab ion-fab-button ion-icon.zmdi-chevron-left:before {
+            transform: rotate(180deg);
+            display: block;
+            left: 2px;
+            position: relative;
+        }
+        .form ion-list ion-item .item_inner .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+    app-parcel-delivery-type,
+    app-set-location,
+    app-send-parcel,
+    app-set-cab-distination,
+    app-book-bike,
+    app-book-cab,
+    app-choose-ride,
+    app-available-cabs,
+    app-add-new-address {
+        ion-fab ion-fab-button ion-icon.zmdi-chevron-left:before {
+            transform: rotate(180deg);
+            display: block;
+            left: 2px;
+            position: relative;
+        }
+    }
+    app-home-services {
+        .service_categories ion-row ion-col .category .img_box img {
+            transform: scaleX(-1);
+        }
+        .form ion-list ion-item .item_inner .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+    app-medicine-list,
+    app-home-service-providers {
+        ion-header .sort .sort_item {
+            &:first-child {
+                margin-right: 20px !important;
+                margin-left: 6px !important;
+            }
+            &:last-child {
+                margin-right: 6px !important;
+                margin-left: 20px !important;
+            }
+        }
+        .form ion-list ion-item .item_inner .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+    app-home-service-provider-info {
+        ion-header.active .header_text {
+            padding-left: 20px !important;
+            padding-right: 58px !important;
+        }
+        .form.ratings ion-list ion-item .item_inner .img_box {
+            margin-right: 0px !important;
+            margin-left: 206px !important;
+        }
+        .dateTime .form ion-radio-group ion-item {
+            &:first-child {
+                margin-right: 20px !important;
+                margin-left: 6px !important;
+            }
+            &:last-child {
+                margin-right: 6px !important;
+                margin-left: 20px !important;
+            }
+        }
+    }
+    app-parcel-delivery-details {
+        .form ion-list ion-card.package_type .scroll-x ion-item {
+            &:first-child {
+                margin-right: 20px !important;
+                margin-left: 6px !important;
+            }
+            &:last-child {
+                margin-right: 6px !important;
+                margin-left: 20px !important;
+            }
+        }
+    }
+    app-medicine-shopping {
+        .form ion-list ion-item .item_inner .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+    app-medicine-list {
+        ion-list ion-item .item-inner .img_box {
+            margin-right: 0 !important;
+            margin-left: 10px !important;
+        }
+    }
+    app-medicine-more-seller {
+        ion-footer ion-list .listHeader .img_box {
+            margin-right: 0 !important;
+            margin-left: 20px !important;
+        }
+    }
+    app-medicine-seller-info {
+        ion-accordion-group ion-accordion .item-list ion-item .item-inner .img_box {
+            margin-right: 0 !important;
+            margin-left: 10px !important;
+        }
+    }
+    app-start-shopping {
+        .service_categories ion-row ion-col .category .img_box img {
+            transform: scaleX(-1);
+        }
+    }
+    app-shopping-order-delivered,
+    app-shopping-order-track,
+    app-shopping-product-checkout {
+        .form ion-list ion-card ion-item .img_box {
+            margin-right: 0 !important;
+            margin-left: 15px !important;
+        }
+    }
+    app-my-orders {
+        .form ion-list ion-item .item_inner {
+            .img_box {
+                margin-right: 0 !important;
+                margin-left: 18px !important;
+            }
+            .item-content .order_status ion-row ion-col {
+                &:first-child {
+                    &::before {
+                        display: block !important;
+                    }
+                    &::after {
+                        display: none !important;
+                    }
+                }
+                &:last-child {
+                    &::before {
+                        display: none !important;
+                    }
+                    &::after {
+                        display: block !important;
+                    }
+                }
+            }
+        }
+    }
+    app-shopping-product-info {
+        ion-content ion-fab h3 {
+            right: unset!important;
+            left: -7px!important;
+        }
+    }
+    app-shopping-product-info {
+        .banner ion-fab ion-fab-button ion-icon {
+            &.zmdi-chevron-left:before {
+                transform: rotate(180deg);
+                display: block;
+            }
+        }
+    }
+} 

@@ -1,0 +1,25 @@
+{
+  "appId": "com.gtrii.app",
+  "appName": "Gtrii",
+  "webDir": "dist",
+  "bundledWebRuntime": false,
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 4000,
+      "launchFadeOutDuration": 3000,
+      "backgroundColor": "#de0f17",
+      "showSpinner": false,
+      "androidSpinnerStyle": "small",
+      "iosSpinnerStyle": "small",
+      "splashFullScreen": true,
+      "splashImmersive": true
+    }
+  },
+  "server": {
+    "androidScheme": "https",
+    "hostname" : "127.0.0.1",
+    "cleartext":true,
+    "allowNavigation":["*"]
+  }
+}
+
