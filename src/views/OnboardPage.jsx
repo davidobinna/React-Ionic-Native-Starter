@@ -10,23 +10,23 @@ const OnboardPage = () => {
 
     const slideContent = [
 		{
-			image: "./assets/applogo1.png",
+			image: "../src/assets/images/onboard/ecommerce.png",
 			mainSlide: true,
-			title: "Ionic Onboarding UI",
-			text: "Share moments with your followers and experience memorable captures"
+			title: "-- Marketplace --",
+			text: "Explore Our Marketplace, discover, shop and elevate your business."
 		},
 		{
-			image: "/assets/1sub.png",
-			title: "Capture",
-			text: "Capture that perfect moment in your life"
+			image: "../src/assets/images/onboard/logistics.png",
+			title: "-- Logistics --",
+			text: "Streamline your delivery with our marketplace solutions."
 		},
 		{
-			image: "/assets/2sub.png",
+			image: "/assets/applogo3.png",
 			title: "Organize",
 			text: "Organize photos exactly how you want them"
 		},
 		{
-			image: "/assets/3sub.png",
+			image: "/assets/applogo4.png",
 			title: "Share",
 			finalSlide: true,
 			text: "Are you ready to share your special moments online with the world?"

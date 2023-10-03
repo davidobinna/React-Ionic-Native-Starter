@@ -10,7 +10,7 @@ const OnboardingSlide = ({ image, mainSlide = false, finalSlide = false, title, 
 				<IonRow className="slide-content-container">
 					<IonCol size="10" className="slide-content">
 						<img src={ image } className={ mainSlide && "slide-main-image" } />
-						<h1>{ title }</h1>
+						<h3>{ title }</h3>
 						<p>{ text }</p>
 
 						{ mainSlide && 
